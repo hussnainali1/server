@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const bodyparser = require("body-parser");
 const route = require("./routes/routes");
 var cors = require("cors");
+var PORT = process.env.PORT || 9000
 
 // mongoose.connect("mongodb://localhost/newsbuzz", {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connect("mongodb://localhost/Newsbuzz", {
@@ -20,6 +21,6 @@ app.use("/", route);
 // app.use("/api/mews", read);
 // app.use("/api/scholarship/bachulars", read);
 
-app.listen(9000, function() {
+app.listen(9000, function () {
   console.log("server is running at post localhost:9000");
 });
