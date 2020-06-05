@@ -7,7 +7,7 @@ var cors = require("cors");
 var PORT = process.env.PORT || 9000
 
 // mongoose.connect("mongodb://localhost/newsbuzz", {useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.connect("mongodb://localhost/Newsbuzz", {
+mongoose.connect("mongodb+srv://hussnainkhilgi1:Pakistan@123@cluster0-011rc.mongodb.net/Newsbuzz?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
