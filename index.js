@@ -21,6 +21,6 @@ app.use("/", route);
 // app.use("/api/mews", read);
 // app.use("/api/scholarship/bachulars", read);
 
-app.listen(9000, function () {
+app.listen(PORT, function () {
   console.log("server is running at post localhost:9000");
 });
