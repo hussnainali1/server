@@ -18,7 +18,8 @@
     "mongoose-unique-validator": "^2.0.3",
     "nodeman": "^1.1.2",
     "nodemon": "^2.0.2",
-    "python-shell": "^1.0.8"
+    "python-shell": "^1.0.8",
+    "request": "^2.88.2"
   },
   "description": ""
 }
