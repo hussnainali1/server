@@ -25,6 +25,11 @@ const {
 const {
   updateEventStatus,
 } = require("../controllers/registerEventsAPI/changeEventStatus");
+
+const {
+  Reaact_Search_registerEvent,
+} = require("../controllers/registerEventsAPI/react_Event_display");
+
 // ===============
 // const {
 //   getAllEvent
@@ -62,6 +67,13 @@ const {
   Search_Event_ID,
 } = require("../controllers/registerEventsAPI/getEventById");
 
+// ------------------------------------------------------
+
+const { readJobs } = require("../controllers/img_download_api/img_download");
+const {
+  img_data_update_to_db,
+} = require("../controllers/img_download_api/img_data_read");
+// ------------------------------------------------------
 // save_event
 
 router.get("/", getData);
@@ -78,6 +90,11 @@ router.get("/api/world", getWorld);
 router.get("/api/bussiness", getBussiness);
 router.get("/api/jobs", getJobs);
 
+// =======================================img download===========================
+router.get("/api/img/download", readJobs);
+router.post("/api/img/DBdata/update", img_data_update_to_db);
+// =======================================img download===========================
+
 router.post("/saveEvent", save_event);
 
 router.post("/api/search/latest", Search_latest_news);
@@ -93,6 +110,8 @@ router.post("/api/search/searchjobs", Search_jobs_news);
 
 router.post("/api/display/registerEvent", Search_registerEvent);
 router.get("/api/display/registerEvent/detail", Search_Event_ID);
+
+router.get("/api/display/react/registerEvent", Reaact_Search_registerEvent);
 
 router.post("/api/display/registerEvent/updateStatus", updateEventStatus);
 

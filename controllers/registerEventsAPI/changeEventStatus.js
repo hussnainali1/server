@@ -10,8 +10,8 @@ exports.updateEventStatus = async (req, res) => {
     var objForUpdate = {};
     objForUpdate.status = req.body.status_update;
     await event.findOneAndUpdate({
-        _id: req.body.id_update
-      },
+      _id: req.body.id_update
+    },
       objForUpdate,
       function (error, results) {
         if (error) {
